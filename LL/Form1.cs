@@ -34,7 +34,11 @@ namespace LL
         }
 
 
-
+        /// <summary>
+        /// 显示功率计算窗口
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PowerCalc_Click(object sender, EventArgs e)
         {
             Form fmPowerCalc = new FormPowerCalc();
