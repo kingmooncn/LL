@@ -16,5 +16,11 @@ namespace LL
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            int a = 1;
+            int b = 2;
+        }
     }
 }
