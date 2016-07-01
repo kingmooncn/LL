@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SqlHelper;
+
+
 namespace LL
 {
     public partial class Form1 : Form
@@ -35,7 +37,8 @@ namespace LL
 
         private void PowerCalc_Click(object sender, EventArgs e)
         {
-
+            Form fmPowerCalc = new FormPowerCalc();
+            fmPowerCalc.ShowDialog();
         }
     }
 }
