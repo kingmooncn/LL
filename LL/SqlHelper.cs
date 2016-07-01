@@ -8,7 +8,7 @@ namespace SqlHelper
 {
     public static class SqlHeper
     {
-        static OleDbConnection ConnectDatabase ()
+        public static OleDbConnection ConnectDatabase ()
         {
             OleDbConnection conn;
             conn = new OleDbConnection(@"Provider='Microsoft.Jet.OLEDB.4.0';Data Source='"  + @"/para.accdb'");

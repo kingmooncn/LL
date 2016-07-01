@@ -30,12 +30,14 @@
         {
             this.tcMain = new System.Windows.Forms.TabControl();
             this.bpParameter = new System.Windows.Forms.TabPage();
+            this.btOK = new System.Windows.Forms.Button();
             this.tpPM = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tcMain.SuspendLayout();
+            this.bpParameter.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +53,7 @@
             // 
             // bpParameter
             // 
+            this.bpParameter.Controls.Add(this.btOK);
             this.bpParameter.Location = new System.Drawing.Point(4, 22);
             this.bpParameter.Name = "bpParameter";
             this.bpParameter.Padding = new System.Windows.Forms.Padding(3);
@@ -59,12 +62,22 @@
             this.bpParameter.Text = "参数";
             this.bpParameter.UseVisualStyleBackColor = true;
             // 
+            // btOK
+            // 
+            this.btOK.Location = new System.Drawing.Point(243, 6);
+            this.btOK.Name = "btOK";
+            this.btOK.Size = new System.Drawing.Size(75, 23);
+            this.btOK.TabIndex = 0;
+            this.btOK.Text = "OK";
+            this.btOK.UseVisualStyleBackColor = true;
+            this.btOK.Click += new System.EventHandler(this.button1_Click);
+            // 
             // tpPM
             // 
             this.tpPM.Location = new System.Drawing.Point(4, 22);
             this.tpPM.Name = "tpPM";
             this.tpPM.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPM.Size = new System.Drawing.Size(903, 368);
+            this.tpPM.Size = new System.Drawing.Size(925, 478);
             this.tpPM.TabIndex = 1;
             this.tpPM.Text = "PM";
             this.tpPM.UseVisualStyleBackColor = true;
@@ -113,6 +126,7 @@
             this.Text = "LL";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tcMain.ResumeLayout(false);
+            this.bpParameter.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -129,6 +143,7 @@
         private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 编辑ToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.Button btOK;
     }
 }
 
