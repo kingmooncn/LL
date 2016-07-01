@@ -16,5 +16,24 @@ namespace LL
         {
             InitializeComponent();
         }
+
+        private void FormPowerCalc_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btPowerCalc_Click(object sender, EventArgs e)
+        {
+            float PowerDbm, PowerWatter;
+            PowerDbm = float.Parse(tbPowerDbm.Text);
+            PowerWatter = float.Parse(tbPowerWatter.Text);
+
+            
+        }
+
+        private void tbPowerWatter_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
