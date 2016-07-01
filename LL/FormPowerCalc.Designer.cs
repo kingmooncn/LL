@@ -51,6 +51,7 @@
             this.tbPowerDbm.Name = "tbPowerDbm";
             this.tbPowerDbm.Size = new System.Drawing.Size(100, 21);
             this.tbPowerDbm.TabIndex = 1;
+            this.tbPowerDbm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbPowerWatter
             // 
