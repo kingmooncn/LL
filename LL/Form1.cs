@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SqlHelper;
+
+
 namespace LL
 {
     public partial class Form1 : Form
@@ -32,10 +34,15 @@ namespace LL
         }
 
 
-
+        /// <summary>
+        /// 显示功率计算窗口
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PowerCalc_Click(object sender, EventArgs e)
         {
-
+            Form fmPowerCalc = new FormPowerCalc();
+            fmPowerCalc.ShowDialog();
         }
     }
 }
