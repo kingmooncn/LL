@@ -30,5 +30,12 @@ namespace LL
         {
            
         }
+
+
+
+        private void PowerCalc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
