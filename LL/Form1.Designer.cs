@@ -30,7 +30,17 @@
         {
             this.tcMain = new System.Windows.Forms.TabControl();
             this.bpParameter = new System.Windows.Forms.TabPage();
-            this.btOK = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbParaDefaultValue = new System.Windows.Forms.TextBox();
+            this.tbParaRange = new System.Windows.Forms.TextBox();
+            this.tbParaObject = new System.Windows.Forms.TextBox();
+            this.Label3 = new System.Windows.Forms.Label();
+            this.tbPara3GPPName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbParaName = new System.Windows.Forms.TextBox();
+            this.btParaQuery = new System.Windows.Forms.Button();
             this.tpPM = new System.Windows.Forms.TabPage();
             this.tpSignaling = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -43,6 +53,13 @@
             this.说明ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tbParaDescription = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbParaInfluence = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbParaSuggestValue = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btParaSave = new System.Windows.Forms.Button();
             this.tcMain.SuspendLayout();
             this.bpParameter.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -61,7 +78,24 @@
             // 
             // bpParameter
             // 
-            this.bpParameter.Controls.Add(this.btOK);
+            this.bpParameter.Controls.Add(this.btParaSave);
+            this.bpParameter.Controls.Add(this.label8);
+            this.bpParameter.Controls.Add(this.tbParaSuggestValue);
+            this.bpParameter.Controls.Add(this.label7);
+            this.bpParameter.Controls.Add(this.tbParaInfluence);
+            this.bpParameter.Controls.Add(this.label6);
+            this.bpParameter.Controls.Add(this.tbParaDescription);
+            this.bpParameter.Controls.Add(this.label5);
+            this.bpParameter.Controls.Add(this.label4);
+            this.bpParameter.Controls.Add(this.tbParaDefaultValue);
+            this.bpParameter.Controls.Add(this.tbParaRange);
+            this.bpParameter.Controls.Add(this.tbParaObject);
+            this.bpParameter.Controls.Add(this.Label3);
+            this.bpParameter.Controls.Add(this.tbPara3GPPName);
+            this.bpParameter.Controls.Add(this.label2);
+            this.bpParameter.Controls.Add(this.label1);
+            this.bpParameter.Controls.Add(this.tbParaName);
+            this.bpParameter.Controls.Add(this.btParaQuery);
             this.bpParameter.Location = new System.Drawing.Point(4, 22);
             this.bpParameter.Name = "bpParameter";
             this.bpParameter.Padding = new System.Windows.Forms.Padding(3);
@@ -70,15 +104,96 @@
             this.bpParameter.Text = "参数";
             this.bpParameter.UseVisualStyleBackColor = true;
             // 
-            // btOK
+            // label5
             // 
-            this.btOK.Location = new System.Drawing.Point(277, 6);
-            this.btOK.Name = "btOK";
-            this.btOK.Size = new System.Drawing.Size(75, 23);
-            this.btOK.TabIndex = 0;
-            this.btOK.Text = "OK";
-            this.btOK.UseVisualStyleBackColor = true;
-            this.btOK.Click += new System.EventHandler(this.button1_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(41, 127);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "默认值：";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 12);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "取值范围：";
+            // 
+            // tbParaDefaultValue
+            // 
+            this.tbParaDefaultValue.Location = new System.Drawing.Point(100, 124);
+            this.tbParaDefaultValue.Name = "tbParaDefaultValue";
+            this.tbParaDefaultValue.Size = new System.Drawing.Size(179, 21);
+            this.tbParaDefaultValue.TabIndex = 8;
+            // 
+            // tbParaRange
+            // 
+            this.tbParaRange.Location = new System.Drawing.Point(100, 97);
+            this.tbParaRange.Name = "tbParaRange";
+            this.tbParaRange.Size = new System.Drawing.Size(179, 21);
+            this.tbParaRange.TabIndex = 7;
+            // 
+            // tbParaObject
+            // 
+            this.tbParaObject.Location = new System.Drawing.Point(100, 70);
+            this.tbParaObject.Name = "tbParaObject";
+            this.tbParaObject.Size = new System.Drawing.Size(179, 21);
+            this.tbParaObject.TabIndex = 6;
+            // 
+            // Label3
+            // 
+            this.Label3.AutoSize = true;
+            this.Label3.Location = new System.Drawing.Point(29, 73);
+            this.Label3.Name = "Label3";
+            this.Label3.Size = new System.Drawing.Size(65, 12);
+            this.Label3.TabIndex = 5;
+            this.Label3.Text = "网元级别：";
+            // 
+            // tbPara3GPPName
+            // 
+            this.tbPara3GPPName.Location = new System.Drawing.Point(100, 43);
+            this.tbPara3GPPName.Name = "tbPara3GPPName";
+            this.tbPara3GPPName.Size = new System.Drawing.Size(179, 21);
+            this.tbPara3GPPName.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "规范名称：";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 12);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "参数名称：";
+            // 
+            // tbParaName
+            // 
+            this.tbParaName.Location = new System.Drawing.Point(100, 16);
+            this.tbParaName.Name = "tbParaName";
+            this.tbParaName.Size = new System.Drawing.Size(179, 21);
+            this.tbParaName.TabIndex = 1;
+            // 
+            // btParaQuery
+            // 
+            this.btParaQuery.Location = new System.Drawing.Point(31, 453);
+            this.btParaQuery.Name = "btParaQuery";
+            this.btParaQuery.Size = new System.Drawing.Size(75, 23);
+            this.btParaQuery.TabIndex = 0;
+            this.btParaQuery.Text = "查询";
+            this.btParaQuery.UseVisualStyleBackColor = true;
+            this.btParaQuery.Click += new System.EventHandler(this.button1_Click);
             // 
             // tpPM
             // 
@@ -137,13 +252,13 @@
             this.小工具ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuPowerCalc});
             this.小工具ToolStripMenuItem.Name = "小工具ToolStripMenuItem";
-            this.小工具ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.小工具ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.小工具ToolStripMenuItem.Text = "小工具";
             // 
             // menuPowerCalc
             // 
             this.menuPowerCalc.Name = "menuPowerCalc";
-            this.menuPowerCalc.Size = new System.Drawing.Size(152, 22);
+            this.menuPowerCalc.Size = new System.Drawing.Size(148, 22);
             this.menuPowerCalc.Text = "功率单位换算";
             this.menuPowerCalc.Click += new System.EventHandler(this.PowerCalc_Click);
             // 
@@ -176,6 +291,65 @@
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // tbParaDescription
+            // 
+            this.tbParaDescription.Location = new System.Drawing.Point(426, 10);
+            this.tbParaDescription.Multiline = true;
+            this.tbParaDescription.Name = "tbParaDescription";
+            this.tbParaDescription.Size = new System.Drawing.Size(491, 135);
+            this.tbParaDescription.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(355, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 12);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "参数描述：";
+            // 
+            // tbParaInfluence
+            // 
+            this.tbParaInfluence.Location = new System.Drawing.Point(426, 151);
+            this.tbParaInfluence.Multiline = true;
+            this.tbParaInfluence.Name = "tbParaInfluence";
+            this.tbParaInfluence.Size = new System.Drawing.Size(491, 325);
+            this.tbParaInfluence.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(355, 154);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 12);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "经验总结：";
+            // 
+            // tbParaSuggestValue
+            // 
+            this.tbParaSuggestValue.Location = new System.Drawing.Point(100, 151);
+            this.tbParaSuggestValue.Name = "tbParaSuggestValue";
+            this.tbParaSuggestValue.Size = new System.Drawing.Size(179, 21);
+            this.tbParaSuggestValue.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(41, 154);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "建议值：";
+            // 
+            // btParaSave
+            // 
+            this.btParaSave.Location = new System.Drawing.Point(233, 453);
+            this.btParaSave.Name = "btParaSave";
+            this.btParaSave.Size = new System.Drawing.Size(75, 23);
+            this.btParaSave.TabIndex = 17;
+            this.btParaSave.Text = "保存";
+            this.btParaSave.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -190,6 +364,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tcMain.ResumeLayout(false);
             this.bpParameter.ResumeLayout(false);
+            this.bpParameter.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -206,7 +381,7 @@
         private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 编辑ToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.Button btOK;
+        private System.Windows.Forms.Button btParaQuery;
         private System.Windows.Forms.TabPage tpSignaling;
         private System.Windows.Forms.ToolStripMenuItem 工具ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
@@ -214,6 +389,23 @@
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 小工具ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuPowerCalc;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbParaDefaultValue;
+        private System.Windows.Forms.TextBox tbParaRange;
+        private System.Windows.Forms.TextBox tbParaObject;
+        private System.Windows.Forms.Label Label3;
+        private System.Windows.Forms.TextBox tbPara3GPPName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbParaName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbParaSuggestValue;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbParaInfluence;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbParaDescription;
+        private System.Windows.Forms.Button btParaSave;
     }
 }
 
