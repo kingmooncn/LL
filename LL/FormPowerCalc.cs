@@ -30,5 +30,10 @@ namespace LL
 
             
         }
+
+        private void tbPowerWatter_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

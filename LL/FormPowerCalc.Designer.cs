@@ -58,6 +58,7 @@
             this.tbPowerWatter.Name = "tbPowerWatter";
             this.tbPowerWatter.Size = new System.Drawing.Size(100, 21);
             this.tbPowerWatter.TabIndex = 2;
+            this.tbPowerWatter.TextChanged += new System.EventHandler(this.tbPowerWatter_TextChanged);
             // 
             // label1
             // 
