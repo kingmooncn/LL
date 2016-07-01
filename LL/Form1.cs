@@ -8,12 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SqlHelper;
+using System.Data.OleDb;
 
 
 namespace LL
 {
+    
     public partial class Form1 : Form
     {
+        //数据库连接公共变量
+        public OleDbConnection conn;
+        public OleDbCommand comm;
+
+
+
         public Form1()
         {
             InitializeComponent();
@@ -47,6 +55,25 @@ namespace LL
 
         private void label5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        /// <summary>
+        /// 连接数据库
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btOpenDb_Click(object sender, EventArgs e)
+        {
+           OleDbConnection conn = SqlHelper.SqlHeper.connectDatabase();
+            if (conn.State == ConnectionState.Open)
+            {
+                tsslParaDbStatus.Text = "Db Open Success";
+            }
+            else
+            {
+                tsslParaDbStatus.Text = "Db Open Fail";
+            }
 
         }
     }
