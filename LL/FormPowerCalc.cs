@@ -31,25 +31,25 @@ namespace LL
             {
                 PowerDbm = Convert.ToDouble(tbPowerDbm.Text.Trim());
                 double PowerDbmToWatter = Math.Pow(10, PowerDbm / 10) / 1000;
-                tbPowerWatter.Text = PowerDbmToWatter.ToString();
+                tbPowerWatter.Text = PowerDbmToWatter.ToString("0.000");
             }
             else if (!(tbPowerWatter.Text.Trim() == ""))
             {
                 PowerWatter = Convert.ToDouble(tbPowerWatter.Text.Trim());
                 double PowerWatterToDbm = 10 * Math.Log10(PowerWatter*1000);
-                tbPowerDbm.Text = PowerWatterToDbm.ToString();
+                tbPowerDbm.Text = PowerWatterToDbm.ToString("0.000");
             }
             else
             {
-                
-                tbPowerWatter.Text = "请输入功率值(单位为W)";
-                tbPowerDbm.Text = "请输入功率值(单位为Dbm)";
+
+                MessageBox.Show("请输入需要转换的功率值！");
             }
         }
 
-        private void tbPowerWatter_TextChanged(object sender, EventArgs e)
+        private void btPowerClear_Click(object sender, EventArgs e)
         {
-
+            tbPowerWatter.Text = "";
+            tbPowerDbm.Text = "";
         }
     }
 }
