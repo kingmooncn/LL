@@ -38,7 +38,7 @@ namespace LL
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-           
+           bt
         }
 
 
@@ -65,15 +65,33 @@ namespace LL
         /// <param name="e"></param>
         private void btOpenDb_Click(object sender, EventArgs e)
         {
-           OleDbConnection conn = SqlHelper.SqlHeper.connectDatabase();
+            OleDbConnection conn = SqlHeper.connectDatabase();
+            SqlHeper.openDbConnection(conn);
+           
             if (conn.State == ConnectionState.Open)
             {
+                tsslParaDbStatus.ForeColor = Color.Green;
                 tsslParaDbStatus.Text = "Db Open Success";
+                btOpenDb.Enabled = false;
             }
             else
             {
+                tsslParaDbStatus.ForeColor = Color.Red;
                 tsslParaDbStatus.Text = "Db Open Fail";
             }
+        }
+
+        private void btCloseDb_Click(object sender, EventArgs e)
+        {
+            SqlHeper.closeConnection(conn);
+            tsslParaDbStatus.ForeColor = Color.Yellow;
+            tsslParaDbStatus.Text = "Db Closed";
+            btOpenDb.Enabled = true;
+            btCloseDb.Enabled = false;
+        }
+
+        private void btParaQuery_Click(object sender, EventArgs e)
+        {
 
         }
     }

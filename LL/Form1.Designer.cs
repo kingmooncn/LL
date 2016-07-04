@@ -120,6 +120,7 @@
             this.btCloseDb.TabIndex = 20;
             this.btCloseDb.Text = "关闭数据库";
             this.btCloseDb.UseVisualStyleBackColor = true;
+            this.btCloseDb.Click += new System.EventHandler(this.btCloseDb_Click);
             // 
             // btOpenDb
             // 
@@ -298,7 +299,7 @@
             this.btParaQuery.TabIndex = 0;
             this.btParaQuery.Text = "查询";
             this.btParaQuery.UseVisualStyleBackColor = true;
-            this.btParaQuery.Click += new System.EventHandler(this.button1_Click);
+            this.btParaQuery.Click += new System.EventHandler(this.btParaQuery_Click);
             // 
             // tpPM
             // 

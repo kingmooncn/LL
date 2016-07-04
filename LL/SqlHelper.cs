@@ -14,7 +14,8 @@ namespace SqlHelper
         public static OleDbConnection connectDatabase ()
         {
             OleDbConnection conn;
-            conn = new OleDbConnection(@"Provider='Microsoft.Jet.OLEDB.4.0';Data Source='"  + @"/para.accdb'");
+            
+            conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+ System.Environment.CurrentDirectory+"\\data.accdb");
             return conn;
         }
         /// <summary>
