@@ -95,8 +95,12 @@ namespace LL
             DataTable dt = new DataTable();
             dt = SqlHeper.dataTable(comm,conn,queryStr);
           
-            int i, j;
-            j = 0;
+        }
+
+        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form aboutBox = new AboutBox();
+            aboutBox.ShowDialog();
         }
     }
 }
