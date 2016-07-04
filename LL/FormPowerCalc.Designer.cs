@@ -33,13 +33,14 @@
             this.tbPowerWatter = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btPowerClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btPowerCalc
             // 
             this.btPowerCalc.Location = new System.Drawing.Point(210, 21);
             this.btPowerCalc.Name = "btPowerCalc";
-            this.btPowerCalc.Size = new System.Drawing.Size(75, 67);
+            this.btPowerCalc.Size = new System.Drawing.Size(83, 30);
             this.btPowerCalc.TabIndex = 0;
             this.btPowerCalc.Text = "计算";
             this.btPowerCalc.UseVisualStyleBackColor = true;
@@ -47,7 +48,7 @@
             // 
             // tbPowerDbm
             // 
-            this.tbPowerDbm.Location = new System.Drawing.Point(68, 21);
+            this.tbPowerDbm.Location = new System.Drawing.Point(83, 21);
             this.tbPowerDbm.Name = "tbPowerDbm";
             this.tbPowerDbm.Size = new System.Drawing.Size(100, 21);
             this.tbPowerDbm.TabIndex = 1;
@@ -55,11 +56,11 @@
             // 
             // tbPowerWatter
             // 
-            this.tbPowerWatter.Location = new System.Drawing.Point(68, 67);
+            this.tbPowerWatter.Location = new System.Drawing.Point(83, 67);
             this.tbPowerWatter.Name = "tbPowerWatter";
             this.tbPowerWatter.Size = new System.Drawing.Size(100, 21);
             this.tbPowerWatter.TabIndex = 2;
-            this.tbPowerWatter.TextChanged += new System.EventHandler(this.tbPowerWatter_TextChanged);
+            this.tbPowerWatter.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -73,17 +74,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 70);
+            this.label2.Location = new System.Drawing.Point(12, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 12);
+            this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Watter:";
+            this.label2.Text = "Watter(w):";
+            // 
+            // btPowerClear
+            // 
+            this.btPowerClear.Location = new System.Drawing.Point(210, 64);
+            this.btPowerClear.Name = "btPowerClear";
+            this.btPowerClear.Size = new System.Drawing.Size(83, 25);
+            this.btPowerClear.TabIndex = 5;
+            this.btPowerClear.Text = "清空";
+            this.btPowerClear.UseVisualStyleBackColor = true;
+            this.btPowerClear.Click += new System.EventHandler(this.btPowerClear_Click);
             // 
             // FormPowerCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(323, 127);
+            this.Controls.Add(this.btPowerClear);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbPowerWatter);
@@ -104,5 +116,6 @@
         private System.Windows.Forms.TextBox tbPowerWatter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btPowerClear;
     }
 }
