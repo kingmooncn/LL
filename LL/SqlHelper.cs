@@ -153,7 +153,6 @@ namespace SqlHelper
                 comm.CommandText = sqlstr;
                 da.SelectCommand = comm;
                 da.Fill(ds);
-
             }
             catch (Exception e)
             {

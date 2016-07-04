@@ -36,10 +36,7 @@ namespace LL
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
-        {
-           bt
-        }
+   
 
 
         /// <summary>
@@ -72,6 +69,7 @@ namespace LL
             {
                 tsslParaDbStatus.ForeColor = Color.Green;
                 tsslParaDbStatus.Text = "Db Open Success";
+                comm = SqlHeper.openDbCommand(conn);
                 btOpenDb.Enabled = false;
             }
             else
@@ -84,6 +82,7 @@ namespace LL
         private void btCloseDb_Click(object sender, EventArgs e)
         {
             SqlHeper.closeConnection(conn);
+            SqlHeper.closeDbCommand(comm);
             tsslParaDbStatus.ForeColor = Color.Yellow;
             tsslParaDbStatus.Text = "Db Closed";
             btOpenDb.Enabled = true;
@@ -92,7 +91,12 @@ namespace LL
 
         private void btParaQuery_Click(object sender, EventArgs e)
         {
-
+            string queryStr = "select * from para where parameter_name like '*a3Offset*';";
+            DataTable dt = new DataTable();
+            dt = SqlHeper.dataTable(comm,conn,queryStr);
+          
+            int i, j;
+            j = 0;
         }
     }
 }
