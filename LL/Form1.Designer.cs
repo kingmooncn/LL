@@ -32,7 +32,6 @@
             this.bpParameter = new System.Windows.Forms.TabPage();
             this.btCloseDb = new System.Windows.Forms.Button();
             this.btOpenDb = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btParaSave = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.tbParaSuggestValue = new System.Windows.Forms.TextBox();
@@ -64,6 +63,7 @@
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ssPara = new System.Windows.Forms.StatusStrip();
             this.tsslParaDbStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbParaName = new System.Windows.Forms.ListBox();
             this.tcMain.SuspendLayout();
             this.bpParameter.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -84,9 +84,9 @@
             // bpParameter
             // 
             this.bpParameter.BackColor = System.Drawing.Color.Orange;
+            this.bpParameter.Controls.Add(this.lbParaName);
             this.bpParameter.Controls.Add(this.btCloseDb);
             this.bpParameter.Controls.Add(this.btOpenDb);
-            this.bpParameter.Controls.Add(this.textBox1);
             this.bpParameter.Controls.Add(this.btParaSave);
             this.bpParameter.Controls.Add(this.label8);
             this.bpParameter.Controls.Add(this.tbParaSuggestValue);
@@ -131,15 +131,6 @@
             this.btOpenDb.Text = "打开数据库";
             this.btOpenDb.UseVisualStyleBackColor = true;
             this.btOpenDb.Click += new System.EventHandler(this.btOpenDb_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(100, 227);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(223, 232);
-            this.textBox1.TabIndex = 18;
             // 
             // btParaSave
             // 
@@ -381,13 +372,13 @@
             // 说明ToolStripMenuItem
             // 
             this.说明ToolStripMenuItem.Name = "说明ToolStripMenuItem";
-            this.说明ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.说明ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.说明ToolStripMenuItem.Text = "说明";
             // 
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
@@ -407,6 +398,18 @@
             this.tsslParaDbStatus.Name = "tsslParaDbStatus";
             this.tsslParaDbStatus.Size = new System.Drawing.Size(60, 17);
             this.tsslParaDbStatus.Text = "DbStatus";
+            // 
+            // lbParaName
+            // 
+            this.lbParaName.Enabled = false;
+            this.lbParaName.FormattingEnabled = true;
+            this.lbParaName.ItemHeight = 12;
+            this.lbParaName.Location = new System.Drawing.Point(100, 209);
+            this.lbParaName.Name = "lbParaName";
+            this.lbParaName.ScrollAlwaysVisible = true;
+            this.lbParaName.Size = new System.Drawing.Size(223, 268);
+            this.lbParaName.TabIndex = 21;
+            this.lbParaName.SelectedIndexChanged += new System.EventHandler(this.lbParaName_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -467,12 +470,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbParaDescription;
         private System.Windows.Forms.Button btParaSave;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btCloseDb;
         private System.Windows.Forms.Button btOpenDb;
         private System.Windows.Forms.ToolStripStatusLabel tsslParaDbStatus;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ListBox lbParaName;
     }
 }
 
