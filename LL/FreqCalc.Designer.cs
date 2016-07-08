@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FreqCalc));
             this.btFreqCalc = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +40,7 @@
             // 
             // btFreqCalc
             // 
-            this.btFreqCalc.Location = new System.Drawing.Point(212, 28);
+            this.btFreqCalc.Location = new System.Drawing.Point(209, 24);
             this.btFreqCalc.Name = "btFreqCalc";
             this.btFreqCalc.Size = new System.Drawing.Size(75, 23);
             this.btFreqCalc.TabIndex = 0;
@@ -50,7 +49,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 30);
+            this.textBox1.Location = new System.Drawing.Point(85, 26);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 1;
@@ -58,32 +57,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 36);
+            this.label1.Location = new System.Drawing.Point(16, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 2;
-            this.label1.Text = "频点：";
+            this.label1.Text = "中心频率：";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 77);
+            this.label2.Location = new System.Drawing.Point(16, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 3;
-            this.label2.Text = "频点号：";
+            this.label2.Text = "中心频点：";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(88, 71);
+            this.textBox2.Location = new System.Drawing.Point(85, 67);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 21);
             this.textBox2.TabIndex = 4;
             // 
             // btClearFreq
             // 
-            this.btClearFreq.Location = new System.Drawing.Point(212, 69);
+            this.btClearFreq.Location = new System.Drawing.Point(209, 65);
             this.btClearFreq.Name = "btClearFreq";
             this.btClearFreq.Size = new System.Drawing.Size(75, 23);
             this.btClearFreq.TabIndex = 5;
@@ -92,8 +91,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(328, 12);
+            this.pictureBox1.Image = global::LL.Properties.Resources.频段列表v1_tmp;
+            this.pictureBox1.Location = new System.Drawing.Point(316, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(281, 91);
             this.pictureBox1.TabIndex = 6;
