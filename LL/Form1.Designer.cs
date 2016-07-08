@@ -134,9 +134,9 @@
             // 
             // btParaSave
             // 
-            this.btParaSave.Location = new System.Drawing.Point(19, 361);
+            this.btParaSave.Location = new System.Drawing.Point(329, 70);
             this.btParaSave.Name = "btParaSave";
-            this.btParaSave.Size = new System.Drawing.Size(75, 23);
+            this.btParaSave.Size = new System.Drawing.Size(75, 48);
             this.btParaSave.TabIndex = 17;
             this.btParaSave.Text = "保存";
             this.btParaSave.UseVisualStyleBackColor = true;
@@ -162,7 +162,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(355, 154);
+            this.label7.Location = new System.Drawing.Point(423, 148);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 17);
             this.label7.TabIndex = 14;
@@ -170,18 +170,18 @@
             // 
             // tbParaInfluence
             // 
-            this.tbParaInfluence.Location = new System.Drawing.Point(426, 151);
+            this.tbParaInfluence.Location = new System.Drawing.Point(426, 171);
             this.tbParaInfluence.Multiline = true;
             this.tbParaInfluence.Name = "tbParaInfluence";
             this.tbParaInfluence.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbParaInfluence.Size = new System.Drawing.Size(491, 325);
+            this.tbParaInfluence.Size = new System.Drawing.Size(491, 305);
             this.tbParaInfluence.TabIndex = 13;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(355, 13);
+            this.label6.Location = new System.Drawing.Point(423, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 17);
             this.label6.TabIndex = 12;
@@ -189,11 +189,11 @@
             // 
             // tbParaDescription
             // 
-            this.tbParaDescription.Location = new System.Drawing.Point(426, 10);
+            this.tbParaDescription.Location = new System.Drawing.Point(426, 34);
             this.tbParaDescription.Multiline = true;
             this.tbParaDescription.Name = "tbParaDescription";
             this.tbParaDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbParaDescription.Size = new System.Drawing.Size(491, 135);
+            this.tbParaDescription.Size = new System.Drawing.Size(491, 111);
             this.tbParaDescription.TabIndex = 11;
             // 
             // label5
@@ -284,9 +284,9 @@
             // 
             // btParaQuery
             // 
-            this.btParaQuery.Location = new System.Drawing.Point(19, 322);
+            this.btParaQuery.Location = new System.Drawing.Point(329, 16);
             this.btParaQuery.Name = "btParaQuery";
-            this.btParaQuery.Size = new System.Drawing.Size(75, 23);
+            this.btParaQuery.Size = new System.Drawing.Size(75, 48);
             this.btParaQuery.TabIndex = 0;
             this.btParaQuery.Text = "查询";
             this.btParaQuery.UseVisualStyleBackColor = true;
