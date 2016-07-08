@@ -26,6 +26,7 @@ namespace LL
             for (int i = 0; i < temp.Length; i++)
             {
                 int number = (int)temp[i];
+
                 if (number > '9' || number < '0' && !(number=='.'))
                 {
                     return false;

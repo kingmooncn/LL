@@ -47,7 +47,7 @@ namespace LL
         private void PowerCalc_Click(object sender, EventArgs e)
         {
             Form fmPowerCalc = new FormPowerCalc();
-            //fmPowerCalc.ShowDialog();
+            fmPowerCalc.ShowDialog();
         }
 
         private void label5_Click(object sender, EventArgs e)
