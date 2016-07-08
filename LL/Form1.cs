@@ -19,7 +19,7 @@ namespace LL
         //数据库连接公共变量
         public OleDbConnection conn;
         public OleDbCommand comm;
-
+        public DataTable dt;
 
 
         public Form1()
@@ -68,21 +68,19 @@ namespace LL
             if (conn.State == ConnectionState.Open)
             {
                 tsslParaDbStatus.ForeColor = Color.Green;
-                tsslParaDbStatus.Text = "Db Open Success";
+                tsslParaDbStatus.Text = "数据库打开成功";
                 comm = SqlHeper.openDbCommand(conn);
                 btOpenDb.Enabled = false;
             }
             else
             {
                 tsslParaDbStatus.ForeColor = Color.Red;
-                tsslParaDbStatus.Text = "Db Open Fail";
+                tsslParaDbStatus.Text = "数据库打开失败";
             }
         }
 
         private void btCloseDb_Click(object sender, EventArgs e)
         {
-            SqlHeper.closeConnection(conn);
-            SqlHeper.closeDbCommand(comm);
             tsslParaDbStatus.ForeColor = Color.Yellow;
             tsslParaDbStatus.Text = "Db Closed";
             btOpenDb.Enabled = true;
@@ -91,16 +89,50 @@ namespace LL
 
         private void btParaQuery_Click(object sender, EventArgs e)
         {
-            string queryStr = "select * from para where parameter_name like '*a3Offset*';";
-            DataTable dt = new DataTable();
+
+            lbParaName.Items.Clear();
+            string queryKeyValue = "'%" + tbParaName.Text.Trim() + "%';";
+            string queryStr = "select * from para where parameter_name like "+ queryKeyValue;
+            
             dt = SqlHeper.dataTable(comm,conn,queryStr);
-          
+            if (dt.Rows.Count > 0)
+            {
+                lbParaName.Enabled = true;
+            }
+            else
+            {
+                lbParaName.Enabled = false;
+            }
+                
+
+            for (int i = 0; i < dt.Rows.Count;i++)
+            {
+                lbParaName.Items.Add(dt.Rows[i]["parameter_name"].ToString());
+            }
+
         }
 
         private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form aboutBox = new AboutBox();
             aboutBox.ShowDialog();
+        }
+
+        private void lbParaName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int lb_num = lbParaName.SelectedIndex;
+            if(dt.Rows.Count>0 && lb_num>-1 && lb_num< dt.Rows.Count)
+            {
+                tbParaName.Text = dt.Rows[lb_num]["parameter_name"].ToString();
+                tbPara3GPPName.Text = dt.Rows[lb_num]["3gpp_name"].ToString();
+                tbParaObject.Text = dt.Rows[lb_num]["object"].ToString();
+                tbParaRange.Text = dt.Rows[lb_num]["range"].ToString();
+                tbParaDescription.Text = dt.Rows[lb_num]["description"].ToString();
+                tbParaInfluence.Text = dt.Rows[lb_num]["influence"].ToString();
+                tbParaDefaultValue.Text = dt.Rows[lb_num]["default_value"].ToString();
+                tbParaSuggestValue.Text = dt.Rows[lb_num]["suggestive_value"].ToString();
+            }
+            
         }
     }
 }

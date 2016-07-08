@@ -32,7 +32,6 @@
             this.bpParameter = new System.Windows.Forms.TabPage();
             this.btCloseDb = new System.Windows.Forms.Button();
             this.btOpenDb = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btParaSave = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.tbParaSuggestValue = new System.Windows.Forms.TextBox();
@@ -64,7 +63,7 @@
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ssPara = new System.Windows.Forms.StatusStrip();
             this.tsslParaDbStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.频率计算ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbParaName = new System.Windows.Forms.ListBox();
             this.tcMain.SuspendLayout();
             this.bpParameter.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -85,9 +84,9 @@
             // bpParameter
             // 
             this.bpParameter.BackColor = System.Drawing.Color.Orange;
+            this.bpParameter.Controls.Add(this.lbParaName);
             this.bpParameter.Controls.Add(this.btCloseDb);
             this.bpParameter.Controls.Add(this.btOpenDb);
-            this.bpParameter.Controls.Add(this.textBox1);
             this.bpParameter.Controls.Add(this.btParaSave);
             this.bpParameter.Controls.Add(this.label8);
             this.bpParameter.Controls.Add(this.tbParaSuggestValue);
@@ -133,20 +132,11 @@
             this.btOpenDb.UseVisualStyleBackColor = true;
             this.btOpenDb.Click += new System.EventHandler(this.btOpenDb_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(100, 227);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(223, 232);
-            this.textBox1.TabIndex = 18;
-            // 
             // btParaSave
             // 
-            this.btParaSave.Location = new System.Drawing.Point(19, 361);
+            this.btParaSave.Location = new System.Drawing.Point(329, 70);
             this.btParaSave.Name = "btParaSave";
-            this.btParaSave.Size = new System.Drawing.Size(75, 23);
+            this.btParaSave.Size = new System.Drawing.Size(75, 48);
             this.btParaSave.TabIndex = 17;
             this.btParaSave.Text = "保存";
             this.btParaSave.UseVisualStyleBackColor = true;
@@ -172,7 +162,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(355, 154);
+            this.label7.Location = new System.Drawing.Point(423, 148);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 17);
             this.label7.TabIndex = 14;
@@ -180,18 +170,18 @@
             // 
             // tbParaInfluence
             // 
-            this.tbParaInfluence.Location = new System.Drawing.Point(426, 151);
+            this.tbParaInfluence.Location = new System.Drawing.Point(426, 171);
             this.tbParaInfluence.Multiline = true;
             this.tbParaInfluence.Name = "tbParaInfluence";
             this.tbParaInfluence.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbParaInfluence.Size = new System.Drawing.Size(491, 325);
+            this.tbParaInfluence.Size = new System.Drawing.Size(491, 305);
             this.tbParaInfluence.TabIndex = 13;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(355, 13);
+            this.label6.Location = new System.Drawing.Point(423, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 17);
             this.label6.TabIndex = 12;
@@ -199,11 +189,11 @@
             // 
             // tbParaDescription
             // 
-            this.tbParaDescription.Location = new System.Drawing.Point(426, 10);
+            this.tbParaDescription.Location = new System.Drawing.Point(426, 34);
             this.tbParaDescription.Multiline = true;
             this.tbParaDescription.Name = "tbParaDescription";
             this.tbParaDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbParaDescription.Size = new System.Drawing.Size(491, 135);
+            this.tbParaDescription.Size = new System.Drawing.Size(491, 111);
             this.tbParaDescription.TabIndex = 11;
             // 
             // label5
@@ -294,9 +284,9 @@
             // 
             // btParaQuery
             // 
-            this.btParaQuery.Location = new System.Drawing.Point(19, 322);
+            this.btParaQuery.Location = new System.Drawing.Point(329, 16);
             this.btParaQuery.Name = "btParaQuery";
-            this.btParaQuery.Size = new System.Drawing.Size(75, 23);
+            this.btParaQuery.Size = new System.Drawing.Size(75, 48);
             this.btParaQuery.TabIndex = 0;
             this.btParaQuery.Text = "查询";
             this.btParaQuery.UseVisualStyleBackColor = true;
@@ -358,16 +348,15 @@
             // 小工具ToolStripMenuItem
             // 
             this.小工具ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuPowerCalc,
-            this.频率计算ToolStripMenuItem});
+            this.menuPowerCalc});
             this.小工具ToolStripMenuItem.Name = "小工具ToolStripMenuItem";
-            this.小工具ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.小工具ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.小工具ToolStripMenuItem.Text = "小工具";
             // 
             // menuPowerCalc
             // 
             this.menuPowerCalc.Name = "menuPowerCalc";
-            this.menuPowerCalc.Size = new System.Drawing.Size(152, 22);
+            this.menuPowerCalc.Size = new System.Drawing.Size(148, 22);
             this.menuPowerCalc.Text = "功率单位换算";
             this.menuPowerCalc.Click += new System.EventHandler(this.PowerCalc_Click);
             // 
@@ -410,11 +399,17 @@
             this.tsslParaDbStatus.Size = new System.Drawing.Size(60, 17);
             this.tsslParaDbStatus.Text = "DbStatus";
             // 
-            // 频率计算ToolStripMenuItem
+            // lbParaName
             // 
-            this.频率计算ToolStripMenuItem.Name = "频率计算ToolStripMenuItem";
-            this.频率计算ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.频率计算ToolStripMenuItem.Text = "频率计算";
+            this.lbParaName.Enabled = false;
+            this.lbParaName.FormattingEnabled = true;
+            this.lbParaName.ItemHeight = 12;
+            this.lbParaName.Location = new System.Drawing.Point(100, 209);
+            this.lbParaName.Name = "lbParaName";
+            this.lbParaName.ScrollAlwaysVisible = true;
+            this.lbParaName.Size = new System.Drawing.Size(223, 268);
+            this.lbParaName.TabIndex = 21;
+            this.lbParaName.SelectedIndexChanged += new System.EventHandler(this.lbParaName_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -475,12 +470,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbParaDescription;
         private System.Windows.Forms.Button btParaSave;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btCloseDb;
         private System.Windows.Forms.Button btOpenDb;
         private System.Windows.Forms.ToolStripStatusLabel tsslParaDbStatus;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripMenuItem 频率计算ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ListBox lbParaName;
     }
 }
 
