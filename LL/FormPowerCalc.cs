@@ -39,7 +39,7 @@ namespace LL
         {
             double PowerDbm, PowerWatter;
 
-            if (isNumber(tbPowerDbm.Text.Trim()) == true || isNumber(tbPowerDbm.Text.Trim()) == true  )
+            if (isNumber(tbPowerDbm.Text.Trim()) == true && isNumber(tbPowerWatter.Text.Trim()) == true  )
             {
                 if (!(tbPowerDbm.Text.Trim() == ""))
                 {
