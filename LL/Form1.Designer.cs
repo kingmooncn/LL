@@ -64,6 +64,7 @@
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ssPara = new System.Windows.Forms.StatusStrip();
             this.tsslParaDbStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.频率计算ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tcMain.SuspendLayout();
             this.bpParameter.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -357,15 +358,16 @@
             // 小工具ToolStripMenuItem
             // 
             this.小工具ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuPowerCalc});
+            this.menuPowerCalc,
+            this.频率计算ToolStripMenuItem});
             this.小工具ToolStripMenuItem.Name = "小工具ToolStripMenuItem";
-            this.小工具ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.小工具ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.小工具ToolStripMenuItem.Text = "小工具";
             // 
             // menuPowerCalc
             // 
             this.menuPowerCalc.Name = "menuPowerCalc";
-            this.menuPowerCalc.Size = new System.Drawing.Size(148, 22);
+            this.menuPowerCalc.Size = new System.Drawing.Size(152, 22);
             this.menuPowerCalc.Text = "功率单位换算";
             this.menuPowerCalc.Click += new System.EventHandler(this.PowerCalc_Click);
             // 
@@ -381,13 +383,13 @@
             // 说明ToolStripMenuItem
             // 
             this.说明ToolStripMenuItem.Name = "说明ToolStripMenuItem";
-            this.说明ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.说明ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.说明ToolStripMenuItem.Text = "说明";
             // 
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
@@ -407,6 +409,12 @@
             this.tsslParaDbStatus.Name = "tsslParaDbStatus";
             this.tsslParaDbStatus.Size = new System.Drawing.Size(60, 17);
             this.tsslParaDbStatus.Text = "DbStatus";
+            // 
+            // 频率计算ToolStripMenuItem
+            // 
+            this.频率计算ToolStripMenuItem.Name = "频率计算ToolStripMenuItem";
+            this.频率计算ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.频率计算ToolStripMenuItem.Text = "频率计算";
             // 
             // Form1
             // 
@@ -472,7 +480,7 @@
         private System.Windows.Forms.Button btOpenDb;
         private System.Windows.Forms.ToolStripStatusLabel tsslParaDbStatus;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripMenuItem 频率计算ToolStripMenuItem;
     }
 }
 
